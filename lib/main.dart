@@ -12,28 +12,30 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("column Row"),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.pinkAccent,
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.greenAccent,
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.redAccent,
-            ),
-          ],
-        ),
+        body: MyListView(),
       ),
+    );
+  }
+}
+
+class MyListView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        ListTile(
+          title: Text('List 1'),
+        ),
+        ListTile(
+          title: Text('List 1'),
+        ),
+        ListTile(
+          title: Text('List 1'),
+        ),
+        ListTile(
+          title: Text('List 1'),
+        ),
+      ],
     );
   }
 }
